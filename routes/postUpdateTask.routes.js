@@ -7,15 +7,14 @@ router.post("/updateTask", async(req, res) =>{
 
     if((await task.find({id: userData.id})).length != 0){
         //console.log(userData)
-        task.updateOne({id:userData.id}, {$set:{
+        console.log(await task.find({id_task: Number(userData.id_task)}))
+        await task.updateOne({id_task: Number(userData.id_task)}, {$set:{
             task: userData.task
         }})
         res.send("Ok")
     }else{
         res.send("Not ok")
-    }
-    
-    
+    }  
 })
 
 
