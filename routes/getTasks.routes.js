@@ -2,7 +2,7 @@ const express= require("express")
 const router = express.Router()
 const task = require("../models/tasks")
 
-router.get("/getTasks", async (req, res)=>{
+router.get("/", async (req, res)=>{
     const data = await task.find()
     if(data.length != 0){
         res.send(data)

@@ -11,5 +11,6 @@ app.get("/getTasks", require("./routes/getTasks.routes"))
 app.post("/addBoard", require("./routes/postAddBoards.routes"))
 app.post("/addTask", require("./routes/postAddTask.routes"))
 app.post("/updateTask", require("./routes/postUpdateTask.routes"))
+app.post("/deleteTask", require("./routes/postDeleteTask.routes"))
 
 app.listen(3001)
