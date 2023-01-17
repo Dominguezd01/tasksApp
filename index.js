@@ -10,5 +10,6 @@ app.use(morgan('dev'))
 app.use("/", require("./routes/getTasks.routes"))
 app.post("/addTask", require("./routes/postAddTask.routes"))
 app.post("/updateTask", require("./routes/postUpdateTask.routes"))
+app.post("/deleteTask", require("./routes/postDeleteTask.routes"))
 
 app.listen(3001)
