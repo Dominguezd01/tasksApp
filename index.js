@@ -6,8 +6,9 @@ const conn = require("./database")
 app.use(express.json())
 app.use(morgan('dev'))
 
-
-app.use("/", require("./routes/getTasks.routes"))
+app.get("/getBoards", require("./routes/getBoards.routes"))
+app.get("/getTasks", require("./routes/getTasks.routes"))
+app.post("/addBoard", require("./routes/postAddBoards.routes"))
 app.post("/addTask", require("./routes/postAddTask.routes"))
 app.post("/updateTask", require("./routes/postUpdateTask.routes"))
 
